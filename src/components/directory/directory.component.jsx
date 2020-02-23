@@ -1,11 +1,18 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom'
 import MenuItem from '../menu-item/menu-item.component'
 import './directory.styles.scss'
+
+// const Footer = withRouter((props) => {
+//   console.log('footer props', props);
+//   return (
+//     <h2>Footer</h2>
+//   )
+// })
 
 class Directory extends React.Component {
   constructor() {
     super();
-
     this.state = {
       sections: [
         {
@@ -55,6 +62,7 @@ class Directory extends React.Component {
             <MenuItem key={id} {...otherSectionProps}/>
           ))
         }
+        {/* <Footer/> */}
       </div>
     )
   }
